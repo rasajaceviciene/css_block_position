@@ -1,0 +1,68 @@
+section{
+    background-color: #00ffff;
+    height: 800px;
+    margin: 80px auto;
+    width: 80%;
+    position: relative;/*jei child turi absolute position, sis nustatymas uztikrina, kad child 
+    neiseitu is tevinio elemento ribu*/
+}
+
+/* teviniam elementui suteikus relative pozicija, o childui absolute, child bus ant virsaus*/
+
+div{
+    width: 400px;
+    height: 400px;
+    margin: 10px auto; /*virsus ir apacia po 10px, o auto reiskia iscentruos*/
+    position: absolute; /*tai suteikia div aukstesni lygi, jis atsiranda pas tevini 
+    elementa, t.y. html*/
+    /*top: 0;
+    bottom: 0;
+    right: 0;*/
+}
+
+div h2{
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 400px; /* eilutes auksti nustatome, koks ir bloko aukstis, tai vertikaliai 
+    tekstas gausis centre, bet paprastai taip nedarome*/
+   
+}
+
+div:nth-child(1){
+    background-color: #8a2be2;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    position: fixed; /*uzfiksuoja, paprastai nustatomas kartu su z-index*/
+}
+
+div:nth-child(2){
+    background-color: bisque;
+    z-index: 15; /*kuo didesnis skaicius, tuo aukstesne pozicija*/
+    top: 0;
+    right: 0;
+}
+
+div:nth-child(3){
+    background-color: #3bc914;
+    bottom: 0;
+    left: 0;
+}
+
+div:nth-child(4){
+    background-color: rgb(61, 25, 145);
+    bottom: 0;
+    right: 0;
+}
+
+div:nth-child(5){
+    background-color: #c1b2bc;
+    top: 0;
+    left: 60%;
+}
+
+div:nth-child(6){
+    background-color: #a9197e;
+    bottom: 0;
+    right: 40%;
+}
